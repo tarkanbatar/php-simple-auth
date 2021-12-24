@@ -1,5 +1,5 @@
 <?php
-    include 'db_connection.php';
+    include './pages/db_connection.php';
 
 	session_start();
 
@@ -8,7 +8,7 @@
 	$connection = OpenConnection();
 
 	if (isset($_SESSION['username'])) {
-		header("Location: homepage.php");
+		header("Location: ./pages/homepage.php");
 	}
 
     if(isset($_POST['submit'])){
@@ -20,7 +20,7 @@
 		if($result->num_rows > 0){
 			$row = mysqli_fetch_assoc($result);
 			$_SESSION['username'] = $row['username'];
-			header('Location: homepage.php');
+			header('Location: ./pages/homepage.php');
 		} else {
 			echo "<script>alert('Email or password is wrong!')</script>";
 		}
@@ -53,7 +53,7 @@
 			<div class="input-group">
 				<button name="submit" class="btn">Login</button>
 			</div>
-			<p class="login-register-text">Don't have an account? <a href="register.php">Register Here</a>.</p>
+			<p class="login-register-text">Don't have an account? <a href="./pages/register.php">Register Here</a>.</p>
 		</form>
 	</div>
 </body>

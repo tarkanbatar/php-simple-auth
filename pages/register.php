@@ -17,7 +17,8 @@ if (isset($_POST['submit'])) {
 	$email = $_POST['email'];
 	$password = md5($_POST['password']);
 	$cpassword = md5($_POST['cpassword']);
-
+	header("Location: ../index.php");
+	
 	if ($password == $cpassword) {
 		$sql = "SELECT * FROM users WHERE email='$email";
 		$result = mysqli_query($connection, $sql);
@@ -76,7 +77,7 @@ if (isset($_POST['submit'])) {
 			<div class="input-group">
 				<button name="submit" class="btn" value="Register">Register</button>
 			</div>
-			<p class="login-register-text">Have an account? <a href="index.php">Login Here</a>.</p>
+			<p class="login-register-text">Have an account? <a href="../index.php">Login Here</a>.</p>
 		</form>
 	</div>
 </body>
