@@ -6,11 +6,6 @@
 	error_reporting(0);
 
 	$connection = OpenConnection();
-	if($connection != null){
-		echo "CONNECTION CREATED SUCCESSFULLY";
-	} else {
-		echo "CONNECTION FAILED";
-	}
 
 	if (isset($_SESSION['username'])) {
 		header("Location: homepage.php");
