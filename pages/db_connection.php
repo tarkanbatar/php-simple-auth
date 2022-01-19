@@ -3,7 +3,7 @@
 
         $dbhost = "localhost";
         $dbuser = "root";
-        $dbpassword = "taba1234*";
+        $dbpassword = "?";
         $db = "test_schema"; 
         $port = 3306;
     
